@@ -14,7 +14,7 @@ class Customer:
 
     def fuel_cost(self, fuel_price: float, shop_location: list) -> float:
         distance = dist(self.location, shop_location)
-        return (self.car["fuel_consumption"] * distance / 100) * fuel_price
+        return round(((self.car["fuel_consumption"] * distance / 100) * fuel_price) * 2, 2)
 
     def product_cost(self, product: dict) -> float:
         milk = self.product["milk"] * product["milk"]
