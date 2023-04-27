@@ -7,7 +7,7 @@ class Shop:
         self.location: list = shop["location"]
         self.product: dict = shop["products"]
 
-    def purchase_receipt(self, name: str, product_cart: dict,) -> None:
+    def purchase_receipt(self, name: str, product_cart: dict) -> None:
         date = datetime.now().strftime("%d/%m/%Y %h:%m:%s")
         print(f"Date: {date}"
               f"Thanks, {name}, for your purchase!"
