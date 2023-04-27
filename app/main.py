@@ -18,6 +18,7 @@ def shop_trip():
             if best_price >= one_customer.money:
                 print(f"{one_customer.name} doesn't gave enough money to make a purchase in any shop")
                 break
+            one_customer.__str__()
             one_customer.shopping(best_shop, fuel_price, best_price)
             best_shop.purchase_receipt(one_customer.name, one_customer.product)
             one_customer.way_home()
