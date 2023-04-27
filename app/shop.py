@@ -2,10 +2,10 @@ from datetime import datetime
 
 
 class Shop:
-    def __init__(self, shops: dict) -> None:
-        self.name: str = shops["name"]
-        self.location: list = shops["location"]
-        self.product: dict = shops["products"]
+    def __init__(self, shop: dict) -> None:
+        self.name: str = shop["name"]
+        self.location: list = shop["location"]
+        self.product: dict = shop["products"]
 
     def purchase_receipt(self, name: str, product_cart: dict,) -> None:
         date = datetime.now().strftime("%d/%m/%Y %h:%m:%s")
