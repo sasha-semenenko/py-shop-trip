@@ -1,7 +1,5 @@
 from datetime import datetime
 
-from app.customer import Customer
-
 
 class Shop:
     def __init__(self, shops: dict) -> None:
