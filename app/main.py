@@ -16,8 +16,10 @@ def shop_trip() -> None:
 
         best_shop, best_price = one_customer.cheap_store(fuel_price, shops)
         if best_price >= one_customer.money:
-            print(f"{one_customer.name} doesn't have enough money to make a purchase in any shop")
+            print(f"{one_customer.name} doesn't have enough money "
+                  f"to make a purchase in any shop")
             break
         one_customer.shopping(best_shop, fuel_price, best_price)
-        best_shop.purchase_receipt(one_customer.name, one_customer.product_cart)
+        best_shop.purchase_receipt(one_customer.name,
+                                   one_customer.product_cart)
         one_customer.way_home()

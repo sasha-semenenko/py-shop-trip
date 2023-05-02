@@ -17,7 +17,8 @@ class Customer:
         return self.car["fuel_consumption"] * distance / 100 * fuel_price
 
     def product_cost(self, product_shop: dict) -> float:
-        return sum([product_shop[product] * cost for product, cost in self.product_cart.items()])
+        return sum([product_shop[product] * cost
+                    for product, cost in self.product_cart.items()])
 
     def cheap_store(self, fuel_price: float, shops: List[Shop]) -> tuple:
         print(f"{self.name} has {self.money} dollars")
@@ -30,7 +31,10 @@ class Customer:
             print(f"{self.name}'s trip to the {shop.name} costs {total_cost}")
         return cheap_shop_price[min(cheap_shop_price)], min(cheap_shop_price)
 
-    def shopping(self, shop: Shop, fuel_price: float, product_cost: float) -> None:
+    def shopping(self,
+                 shop: Shop,
+                 fuel_price: float,
+                 product_cost: float) -> None:
         print(f"{self.name} rides to {shop.name}\n")
         self.location = shop.location
         fuel_cost = self.fuel_cost(fuel_price, shop.location) * 2
