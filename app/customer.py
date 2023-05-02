@@ -27,7 +27,7 @@ class Customer:
             product_price = self.product_cost(shop.product)
             total_cost = round((fuel_cost + product_price), 2)
             cheap_shop_price[total_cost] = shop
-            print(f"{self.name}'s trip to the {shop.name} costs {total_cost}\n")
+            print(f"{self.name}'s trip to the {shop.name} costs {total_cost}")
         return cheap_shop_price[min(cheap_shop_price)], min(cheap_shop_price)
 
     def shopping(self, shop: Shop, fuel_price: float, product_cost: float) -> None:
